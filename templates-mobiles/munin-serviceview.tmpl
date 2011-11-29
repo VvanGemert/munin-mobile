@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 	<head> 
-	<title><TMPL_VAR ESCAPE="HTML" NAME="SERVICE"> (<TMPL_VAR NAME="NODE">)</title> 
+	<title><TMPL_VAR ESCAPE="HTML" NAME="SERVICE"> (<TMPL_VAR NAME="CATEGORY">)</title> 
 	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.css" /> 
 	<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script> 
@@ -17,15 +17,13 @@
 <div data-role="page"> 
  
 	<div data-role="header"> 
-		<h1><TMPL_VAR ESCAPE="HTML" NAME="SERVICE"></h1> 
+		<h1><TMPL_VAR ESCAPE="HTML" NAME="CATEGORY"></h1> 
 	</div><!-- /header --> 
  
 	<div data-role="content" id="node-serviceview">	
 
 		<ul data-role="listview" class="show_all_graphs" data-theme="c">
 			<li><a href="../">Back to all domains</a></li>
-			<li><a href="../<TMPL_VAR NAME="DOMAIN">/">List of all graphs on <TMPL_VAR NAME="DOMAIN"></a></li>
-			<li><a href="../<TMPL_VAR NAME="DOMAIN">/<TMPL_VAR NAME="NODE">.html">Show all graphs (actual images) on <TMPL_VAR NAME="DOMAIN"></a></li>
 		</ul>
 
 		<TMPL_LOOP NAME="SERVICES">
