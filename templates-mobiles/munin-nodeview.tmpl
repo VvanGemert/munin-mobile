@@ -14,9 +14,9 @@
 </head>
 <body>
   <!-- munin-nodeview.tmpl -->
-<div data-role="page">
+<div data-role="page" data-add-back-btn="true">
 
-    <div data-role="header" data-add-back-btn="true">
+    <div data-role="header">
         <h1><TMPL_VAR ESCAPE="HTML" NAME="NAME"></h1>
     </div><!-- /header -->
     <!-- Warning not yet implemented <h2><TMPL_VAR ESCAPE="HTML" NAME="name"> :: [ <TMPL_LOOP NAME="CATEGORIES"><a <TMPL_IF NAME="STATE_WARNING">class="warn"</TMPL_IF> <TMPL_IF NAME="STATE_CRITICAL">class="crit"</TMPL_IF> href="#<TMPL_VAR ESCAPE="HTML" NAME="NAME">"><TMPL_VAR ESCAPE="HTML" NAME="NAME"></a> </TMPL_LOOP>]</h2> -->
