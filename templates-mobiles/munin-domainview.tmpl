@@ -17,15 +17,11 @@
 </head>
 <body>
 <div data-role="page" data-theme="b">
-
-
     <div data-role="header">
         <h1><TMPL_VAR ESCAPE="HTML" NAME="DOMAIN"></h1>
     </div><!-- /header -->
 
-
     <div data-role="content">
-
     <TMPL_LOOP NAME="NODES">
         <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
             <li data-role="list-divider"><TMPL_VAR ESCAPE="HTML" NAME="NODE"></li>
@@ -38,10 +34,9 @@
         </ul>
     </TMPL_LOOP>
 
-
-<p class="footer">Munin + <a href="http://www.munin-mobile.com">Munin Mobile</a> by <a href="http://www.bivald.com">bivald</a></p>
-</div>
-<script src="/munin/mobile/js/munin-mobile.js"></script>
+    <p class="footer">Munin + <a href="http://www.munin-mobile.com">Munin Mobile</a> by <a href="http://www.bivald.com">bivald</a></p>
+    </div><!-- /content -->
+</div><!-- /page -->
 </body>
 </html>
 

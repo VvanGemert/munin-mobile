@@ -15,39 +15,34 @@
   <!-- munin-nodeview.tmpl -->
 <div data-role="page">
 
-        <div data-role="header">
-                <h1><TMPL_VAR ESCAPE="HTML" NAME="NAME"></h1>
-        </div><!-- /header -->
-        <!-- Warning not yet implemented <h2><TMPL_VAR ESCAPE="HTML" NAME="name"> :: [ <TMPL_LOOP NAME="CATEGORIES"><a <TMPL_IF NAME="STATE_WARNING">class="warn"</TMPL_IF> <TMPL_IF NAME="STATE_CRITICAL">class="crit"</TMPL_IF> href="#<TMPL_VAR ESCAPE="HTML" NAME="NAME">"><TMPL_VAR ESCAPE="HTML" NAME="NAME"></a> </TMPL_LOOP>]</h2> -->
-        <div data-role="content">
+    <div data-role="header">
+        <h1><TMPL_VAR ESCAPE="HTML" NAME="NAME"></h1>
+    </div><!-- /header -->
+    <!-- Warning not yet implemented <h2><TMPL_VAR ESCAPE="HTML" NAME="name"> :: [ <TMPL_LOOP NAME="CATEGORIES"><a <TMPL_IF NAME="STATE_WARNING">class="warn"</TMPL_IF> <TMPL_IF NAME="STATE_CRITICAL">class="crit"</TMPL_IF> href="#<TMPL_VAR ESCAPE="HTML" NAME="NAME">"><TMPL_VAR ESCAPE="HTML" NAME="NAME"></a> </TMPL_LOOP>]</h2> -->
+    <div data-role="content">
+        <ul data-role="listview">
+            <TMPL_LOOP NAME="CATEGORIES">
+                <li class="ui-li ui-btn ui-btn-up-c "><div class="ui-btn-text mobile_clickable" onClick="javascript:doJump('<TMPL_VAR ESCAPE="HTML" NAME="NAME">')"><TMPL_VAR ESCAPE="HTML" NAME="NAME"></div></li>
+            </TMPL_LOOP>
+        </ul>
+        <p id="quickjump">
 
-                <ul data-role="listview">
-                        <TMPL_LOOP NAME="CATEGORIES">
-                                <li class="ui-li ui-btn ui-btn-up-c "><div class="ui-btn-text mobile_clickable" onClick="javascript:doJump('<TMPL_VAR ESCAPE="HTML" NAME="NAME">')"><TMPL_VAR ESCAPE="HTML" NAME="NAME"></div></li>
-                        </TMPL_LOOP>
-                </ul>
-                <p id="quickjump">
+        </p>
 
-                </p>
-
-                <ul data-role="listview" class="munin_list">
-
-
-                        <TMPL_LOOP NAME="CATEGORIES">
-                          <li data-role="list-divider" id="<TMPL_VAR ESCAPE="HTML" NAME="NAME">"><TMPL_VAR ESCAPE="HTML" NAME="NAME"></li>
-                          <TMPL_LOOP NAME="SERVICES">
-                                <li>
-                                        <h3><a href="<TMPL_VAR NAME="URLX">"><TMPL_VAR ESCAPE="HTML" NAME="LABEL"></a></h3>
-                                        <p><img src="<TMPL_VAR NAME="IMGDAY">" alt="<TMPL_VAR ESCAPE="HTML" NAME="LABEL">" class="imgday" width="300" height="162"></p>
-                                </li>
-                          </TMPL_LOOP>
-                          </li>
+        <ul data-role="listview" class="munin_list">
+            <TMPL_LOOP NAME="CATEGORIES">
+                <li data-role="list-divider" id="<TMPL_VAR ESCAPE="HTML" NAME="NAME">"><TMPL_VAR ESCAPE="HTML" NAME="NAME"></li>
+                <TMPL_LOOP NAME="SERVICES">
+                    <li>
+                        <h3><a href="<TMPL_VAR NAME="URLX">"><TMPL_VAR ESCAPE="HTML" NAME="LABEL"></a></h3>
+                        <p><img src="<TMPL_VAR NAME="IMGDAY">" alt="<TMPL_VAR ESCAPE="HTML" NAME="LABEL">" class="imgday" width="300" height="162"></p>
+                    </li>
                 </TMPL_LOOP>
+                </li>
+            </TMPL_LOOP>
 
-                </ul>
-        </div><!-- /content -->
+        </ul>
+    </div><!-- /content -->
 </div><!-- /page -->
-
-<script src="/munin/mobile/js/munin-mobile.js"></script>
 </body>
 </html>

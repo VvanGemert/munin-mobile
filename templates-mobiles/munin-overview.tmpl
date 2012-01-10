@@ -14,20 +14,23 @@
     <!-- <meta http-equiv="refresh" content="300" /> -->
 </head>
 <body>
-    <div data-role="page" data-theme="b" id="jqm-home">
-        <div id="jqm-homeheader">
-            <p>Munin Mobile</p>
-        </div>
-        <div data-role="content">
-        <TMPL_LOOP NAME="GROUPS">
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
-                <li data-role="list-divider"><TMPL_VAR ESCAPE="HTML" NAME="NAME"></li>
-                <TMPL_LOOP NAME="GROUPS">
-                    <li><a href="<TMPL_VAR NAME="URL">"><TMPL_VAR ESCAPE="HTML" NAME="NAME"></a></li>
-                </TMPL_LOOP>
-            </ul>
-        </TMPL_LOOP>
-        <p class="footer">Munin + <a href="http://www.munin-mobile.com">Munin Mobile</a> by <a href="http://www.bivald.com">bivald</a></p>
+<div data-role="page" data-theme="b" id="jqm-home">
+    <div id="jqm-homeheader">
+        <p>Munin Mobile</p>
     </div>
+
+    <div data-role="content">
+    <TMPL_LOOP NAME="GROUPS">
+        <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+            <li data-role="list-divider"><TMPL_VAR ESCAPE="HTML" NAME="NAME"></li>
+            <TMPL_LOOP NAME="GROUPS">
+                <li><a href="<TMPL_VAR NAME="URL">"><TMPL_VAR ESCAPE="HTML" NAME="NAME"></a></li>
+            </TMPL_LOOP>
+        </ul>
+    </TMPL_LOOP>
+
+    <p class="footer">Munin + <a href="http://www.munin-mobile.com">Munin Mobile</a> by <a href="http://www.bivald.com">bivald</a></p>
+    </div><!-- /content -->
+</div><!-- /page -->
 </body>
 </html>
