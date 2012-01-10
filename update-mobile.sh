@@ -4,8 +4,9 @@
 # Updates the graphs, html and resizes the images
 #
 
-/usr/share/munin/munin-graph --config=/etc/munin/munin-mobile.conf
-/usr/share/munin/munin-html --config=/etc/munin/munin-mobile.conf
+nice /usr/share/munin/munin-graph --config=/etc/munin/munin-mobile.conf
+wait
+nice /usr/share/munin/munin-html --config=/etc/munin/munin-mobile.conf
 
 # Find images in mobile dir, files, *.png, modified between 0 and 3 minutes, not including images, resize with mogrify
 
