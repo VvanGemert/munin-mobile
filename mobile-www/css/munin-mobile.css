@@ -5,10 +5,10 @@
 .ui-mobile #jqm-version { text-indent: -99999px; background: url(../images/version.png) top right no-repeat; width: 119px; height: 122px; overflow: hidden; position: absolute; top: 0; right: 0; }
 .ui-mobile .jqm-themeswitcher { clear: both; margin: 20px 0 -15px; }
 
-/* 
+/*
 .ui-li-thumb {
     float: auto !important;
-    
+
 }
 
 .ui-li-icon
@@ -23,11 +23,11 @@
 }
 
 .munin_list .ui-li-has-thumb {
-    padding-left: 0px !important; /* Make sure the left padding for the image is only 10 */ 
+    padding-left: 0px !important; /* Make sure the left padding for the image is only 10 */
 }
 
 .munin_list .ui-btn-inner {
-    padding-left: 10px !important; /* Make sure the left padding for the image is only 10 */ 
+    padding-left: 10px !important; /* Make sure the left padding for the image is only 10 */
 }
 
 .munin_list .ui-btn-inner {
@@ -42,17 +42,15 @@
 .ui-mobile .overview_child { /* the li containing list/5min */
     height: 30px !important;
 
-    background-image: -moz-linear-gradient(top, #eeeeee, #fdfdfd); 
-    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #fdfdfd));   
+    background-image: -moz-linear-gradient(top, #eeeeee, #fdfdfd);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #fdfdfd));
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#fdfdfd')";
-  
 }
 
 .ui-mobile .overview_child:hover { /* the li containing list/5min */
-    background-image: -moz-linear-gradient(top, #fdfdfd, #eeeeee); 
-    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #fdfdfd),color-stop(1, #eeeeee));   
+    background-image: -moz-linear-gradient(top, #fdfdfd, #eeeeee);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #fdfdfd),color-stop(1, #eeeeee));
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fdfdfd', EndColorStr='#eeeeee')";
-    
 }
 
 .ui-mobile .overview_child .ui-btn-inner {
@@ -84,15 +82,6 @@
 .ui-mobile .show_all_graphs {
     margin-bottom: 14px;
 }
-
-
-
-
-
-
-
-
-
 
 /* Top navigation */
 

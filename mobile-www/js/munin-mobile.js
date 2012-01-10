@@ -1,18 +1,14 @@
-
-
 $('div').live('pagecreate',function(){
-
     $('#quickjump span').click(function() {
-        doJump($(this).html())
+        doJump($(this).html());
     });
 });
 
 function doJump(whereTo) {
-    
-           if($('#'+whereTo).length > 0) {
-               pos = $('#'+whereTo).position();
-               setTimeout("toppx = $('#" + whereTo  + "').position()['top']; $('body').scrollTop(toppx)",100) 
-           }
+   if($('#'+whereTo).length > 0) {
+        pos = $('#'+whereTo).position();
+        setTimeout("toppx = $('#" + whereTo  + "').position()['top']; $('body').scrollTop(toppx)",100);
+   }
 }
 
 if (navigator.userAgent.match(/iPhone/i)) {
